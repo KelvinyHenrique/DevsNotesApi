@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/ping', function (Request $request) {
+    return ['pong'=>true];
+});
+
+
+Route::get('/notes', '');
+Route::get('/note`/{id}', '');
+Route::post('/note', '');
+Route::put('/note/{id}', '');
+Route::delete('/note/{id}', '');
