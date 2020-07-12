@@ -23,8 +23,8 @@ Route::get('/ping', function (Request $request) {
 });
 
 
-Route::get('/notes', '');
-Route::get('/note`/{id}', '');
-Route::post('/note', '');
-Route::put('/note/{id}', '');
-Route::delete('/note/{id}', '');
+Route::get('/notes', 'NoteController@all');
+Route::get('/note/{id}', 'NoteController@one');
+Route::post('/note', 'NoteController@new');
+Route::put('/note/{id}', 'NoteController@edit');
+Route::delete('/note/{id}', 'NoteController@delete');
