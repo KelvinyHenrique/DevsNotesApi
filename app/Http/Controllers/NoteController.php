@@ -20,7 +20,7 @@ class NoteController extends Controller
             'body'=>$note->body
           ];
         }
-        return $this->array;
+        return response()->json($this->array);
     }
     public function one($id){
         $note = Note::find($id);
